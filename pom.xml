@@ -5,8 +5,7 @@
 	<groupId>com.brianholman</groupId>
 	<artifactId>GetFizzBuzz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<!-- 	<packaging>jar</packaging>
- -->
+	<!-- <packaging>jar</packaging> -->
 	<name>GetFizzBuzz</name>
 	<url>http://maven.apache.org</url>
 
@@ -31,6 +30,12 @@
 			<groupId>com.sun.net.httpserver</groupId>
 			<artifactId>http</artifactId>
 			<version>20070405</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.skyscreamer</groupId>
+			<artifactId>jsonassert</artifactId>
+			<version>1.5.0</version>
 			<scope>test</scope>
 		</dependency>
 

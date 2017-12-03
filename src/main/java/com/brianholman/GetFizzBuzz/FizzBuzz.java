@@ -6,27 +6,32 @@ import org.json.JSONObject;
 
 public class FizzBuzz {
 	
-	ArrayList<Integer> fizzArray, buzzArray, fizzBuzzArray = new ArrayList<Integer>();
+	ArrayList<Integer> fizzArray = new ArrayList<Integer>();
+	ArrayList<Integer> buzzArray = new ArrayList<Integer>();
+	ArrayList<Integer> fizzBuzzArray = new ArrayList<Integer>();
+
 	JSONObject arraysObject = new JSONObject();
-	int fizzValue, buzzValue, upperBound;
+	int fizzValue;
+	int buzzValue;
+	int upperBound;
 	
 	// Default values set for fizz and buzz are 3 and 5
-	public FizzBuzz(int upperBound) {
-		fizzValue = 3;
-		buzzValue = 5;
-		this.upperBound = upperBound;
+	FizzBuzz(int upperBound) {
+		setFizzValue(3);
+		setBuzzValue(5);
+		setUpperBound(upperBound);
 	}
 	
-	public FizzBuzz(int fizzValue, int buzzValue, int upperBound) {
-		this.fizzValue = fizzValue;
-		this.buzzValue = buzzValue;
-		this.upperBound = upperBound;
+	FizzBuzz(int fizzValue, int buzzValue, int upperBound) {
+		setFizzValue(fizzValue);
+		setBuzzValue(buzzValue);
+		setUpperBound(upperBound);
 	}
 	
-	public void calculate() {
-		int fizzBuzzValue = this.fizzValue * this.buzzValue;
+	void calculate() {
+		int fizzBuzzValue = fizzValue * buzzValue;
 		
-		for (int i = 1; i < this.upperBound; i++) {
+		for (int i = 1; i < upperBound; i++) {
 			if (i % fizzBuzzValue == 0) {
 				fizzBuzzArray.add(i);
 			}
@@ -39,13 +44,33 @@ public class FizzBuzz {
 		}
 	}
 	
-	public void toJSON() {
+	public JSONObject toJSON() {
 		arraysObject.put("Fizz", fizzArray);
 		arraysObject.put("Buzz", buzzArray);
 		arraysObject.put("FizzBuzz", fizzBuzzArray);
+		return arraysObject;
 	}
-	
-	public JSONObject returnJSON() {
-		return this.arraysObject;
+
+	int getFizzValue() {
+		return fizzValue;
+	}
+
+	void setFizzValue(int buzzValue) {
+		this.fizzValue = buzzValue;
+	}
+	int getBuzzValue() {
+		return buzzValue;
+	}
+
+	void setBuzzValue(int buzzValue) {
+		this.buzzValue = buzzValue;
+	}
+
+	int getUpperBound() {
+		return upperBound;
+	}
+
+	void setUpperBound(int upperBound) {
+		this.upperBound = upperBound;
 	}
 }

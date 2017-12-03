@@ -26,8 +26,8 @@ function run_fizz_buzz_server {
     # Check if jars exist, starting with target, then root of project.
     if [ -f ./target/GetFizzBuzz-0.0.1-SNAPSHOT-jar-with-dependencies.jar ]; then
         jar_location=./target/GetFizzBuzz-0.0.1-SNAPSHOT-jar-with-dependencies.jar
-    elif [ -f ./GetFizzBuzz-0.0.1-SNAPSHOT-jar-with-dependencies.jar ]; then
-        jar_location=./GetFizzBuzz-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+    elif [ -f ./GetFizzBuzz.jar ]; then
+        jar_location=./GetFizzBuzz.jar
     else
 	echo executable jar could not be found, please build using IDE and maven
         exit
@@ -38,7 +38,8 @@ function run_fizz_buzz_server {
     sleep 3
 
     if lsof -Pi :8080 -sTCP:LISTEN -t >/dev/null ; then
-        echo "GetFizzBuzz server is now running..."
+        echo "GetFizzBuzz server is now running on localhost:8080"
+        echo "Query using localhost:8080/fizzbuzz/<upper_bound_number>"
     else
         echo "not running, try importing and running from IDE"
         exit
@@ -46,6 +47,8 @@ function run_fizz_buzz_server {
 
     read -rsp $'Press any key to quit and shut down server\n' -n1 key
     echo shutting down server
+
+    # Gracefully stop server using the built in request mapping
     curl localhost:8080/stop 2>/dev/null
     sleep 3
 

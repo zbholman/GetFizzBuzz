@@ -3,7 +3,9 @@ This is a FizzBuzz as a service application. The server supports an HTTP GET cal
 
 # How to use
 Run the application to start the HTTP Server
+
 In a browser (or using another tool of choice), access localhost:8080/fizzbuzz/<number>
+
 ex. localhost:8080/fizzbuzz/16
 
 This will return the following JSON object
@@ -16,7 +18,10 @@ For building - a Java IDE with maven support
 # To Run
 On Mac/Linux
   - clone project and open root directory
-  - double click start_server.sh, or run in terminal ./start_server.sh
+  - double click start_server.sh, or in terminal run 
+  ```
+  ./start_server.sh
+  ```
   - alternatively, you can run
   ```
   java -jar <project_root>/GetFizzBuzz.jar

@@ -15,8 +15,8 @@ public class FizzBuzzHandler implements HttpHandler {
 
 		t.sendResponseHeaders(200, response.length());
 		OutputStream os = t.getResponseBody();
-        os.write(response.getBytes());
-        os.close();
+        	os.write(response.getBytes());
+        	os.close();
 	}
 	
 	public String processRequest(String requestString) {

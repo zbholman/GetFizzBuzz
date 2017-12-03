@@ -16,9 +16,14 @@ Java 1.8
 For building - a Java IDE with maven support
 
 # To Run
-On Mac/Linux
+- clone project then follow based on your OS
+
+On Mac
+  - open root directory and double click mac_start_server.command
+  
+On Linux
   - clone project and open root directory
-  - double click start_server.sh, or in terminal run 
+  - In terminal, use 'cd' to change directory to the project root, then run
   ```
   ./start_server.sh
   ```

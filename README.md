@@ -37,7 +37,9 @@ On Linux
   ```
   
 On Windows
-  follow build steps and run in IDE or execute jar from command line with
+  - Open project root directory
+  - Double click "GetFizzBuzz.jar" to run
+  - Alternatively, you can follow build steps and run in IDE or execute jar from command line with
   ```
   java -jar <path_to_jar>
   ```

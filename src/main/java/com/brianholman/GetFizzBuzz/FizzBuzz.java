@@ -31,7 +31,7 @@ public class FizzBuzz {
 	void calculate() {
 		int fizzBuzzValue = fizzValue * buzzValue;
 		
-		for (int i = 1; i < upperBound; i++) {
+		for (int i = 1; i <= upperBound; i++) {
 			if (i % fizzBuzzValue == 0) {
 				fizzBuzzArray.add(i);
 			}

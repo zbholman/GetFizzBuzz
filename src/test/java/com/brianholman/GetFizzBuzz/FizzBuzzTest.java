@@ -9,8 +9,8 @@ import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
 public class FizzBuzzTest {
-	FizzBuzz usingDefaults = new FizzBuzz(16);
-	FizzBuzz notUsingDefaults = new FizzBuzz(6, 5, 31);
+	FizzBuzz usingDefaults = new FizzBuzz(15);
+	FizzBuzz notUsingDefaults = new FizzBuzz(6, 5, 30);
 	
 	// Getters and setters were ignored in testing.
 	// They could easily be added if code coverage percantage

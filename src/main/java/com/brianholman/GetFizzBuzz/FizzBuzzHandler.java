@@ -7,7 +7,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 public class FizzBuzzHandler implements HttpHandler {
-	String invalidRequest = "Error: Invalid Request, try entering only numbers after fizzbuzz/";
+	final String invalidRequest = "Error: Invalid Request, try entering only numbers after fizzbuzz/";
 	
 	
 	public void handle(HttpExchange t) throws IOException {
